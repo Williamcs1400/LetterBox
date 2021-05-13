@@ -7,7 +7,7 @@ public class DataStorageManager {
 
     public String dispatch(String[] message){
         if(message[0] == "init"){
-            init();
+            init(message);
         }
         if(message[0] == "words"){
             words();
@@ -18,8 +18,16 @@ public class DataStorageManager {
         return null;
     } 
 
-    private void init( ){
+    private void init(String[] message){
+        String pattern;
 
+        //Concatenando string data com array recebido
+        for(int i = 0; i < message.length; i++){
+            data = data + message[i];
+        }
+        pattern = "[\\w_]+";
+        data = pattern + data.toLowerCase();
+        
     }
 
     private List<Character> words(){
