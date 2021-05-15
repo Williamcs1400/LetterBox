@@ -11,7 +11,7 @@ public class StopWordsManager {
         if(message[0] == "init"){
             init();
         }
-        if(message[0] == "words"){
+        if(message[0] == "is_stop_word"){
             return inStopWorls(message[1]);
         }else{
             return null;
