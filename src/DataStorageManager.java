@@ -5,14 +5,14 @@ public class DataStorageManager {
     
     private String data;
 
-    public String dispatch(String[] message){
+    public Object dispatch(String[] message){
         if(message[0] == "init"){
             init(message);
         }
         if(message[0] == "words"){
             words();
         }else{
-            
+            return null;
         }
 
         return null;
