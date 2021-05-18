@@ -9,7 +9,7 @@ public class WordFrequencyManager {
             init(message[1]);
         }
         else if(message[0] == "run"){
-
+            run();
         }else{
             return null;
         }
@@ -17,11 +17,11 @@ public class WordFrequencyManager {
     }
 
     private void init(String pathToFile){
-        /*storage_manager = DataStorageManager();
+        storage_manager = DataStorageManager();
         stop_word_manager = StopWordManager();
         word_freq_manager = WordFrequencyManager();
         storage_manager.dispatch(['init', pathToFile])
-        stop_word_manager.dispatch(['init'])*/
+        stop_word_manager.dispatch(['init'])
     }
 
     private void run(){
@@ -38,6 +38,4 @@ public class WordFrequencyManager {
             }
         }
     }
-        
-    
 }
