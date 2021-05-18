@@ -1,8 +1,11 @@
-public class WordFrequencyController {
-    
-    //ENTENDI FOI NADA DESSA CLASSE
+import java.util.ArrayList;
+import java.util.List;
 
-    /*int wordFreqs;
+public class WordFrequencyController {
+
+    WordsFreq wf;
+    List<WordsFreq> words = new ArrayList<>();
+    String word;
 
     public Object dispatch(String[] message){
         if(message[0] == "increment_count"){
@@ -16,18 +19,19 @@ public class WordFrequencyController {
     }
 
     private void init(){
-        if (word in self._word_freqs){
-            self._word_freqs[word] += 1;
+        wf = new WordsFreq();
+        if (words.equals(word)){
+            wf.setWord(word);
+            wf.setCont(1);
         }
         else{
-            self._word_freqs[word] = 1
+            wf.setCont(0);
         }
 
-    }*/
+    }
 
-    /*def _sorted(self):
-        return sorted(self._word_freqs.items(), key=operator.itemgetter(1), reverse=True)*/
-
-
-
+    private sorted(){
+        return sorted(self._word_freqs.items(), key=operator.itemgetter(1), reverse=True);
+    }
+    
 }

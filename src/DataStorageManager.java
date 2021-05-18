@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class DataStorageManager {
     
@@ -19,13 +20,13 @@ public class DataStorageManager {
     } 
 
     private void init(String[] message){
-        String pattern;
+        Pattern pattern;
 
         //Concatenando string data com array recebido
         for(int i = 0; i < message.length; i++){
             data = data + message[i];
         }
-        pattern = "[\\w_]+";
+        pattern = Pattern.compile("^[A-Za-z0-9]*\\d+[A-Za-z0-9]*$");
         data = pattern + data.toLowerCase();
         
     }
